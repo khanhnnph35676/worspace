@@ -9,6 +9,7 @@ use App\ShopingCart;
 
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
+    $_SESSION['count_cart'] = 0;
 }
 if (isset($_GET['url'])) {
     $obj = new ShopingCart();

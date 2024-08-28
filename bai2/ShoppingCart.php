@@ -50,11 +50,11 @@
             }
         }
         public function totalCart(){
-            $count = 0;
+            $_SESSION['count_cart'] = 0;
             foreach($_SESSION['cart'] as $key=>$value){
-                    $count+=$value['quantity'];
+                $_SESSION['count_cart']+=$value['quantity'];
             }
-            return $count;
+            return $_SESSION['count_cart'];
         }
         public function contentCart(){
             

@@ -1,5 +1,13 @@
+<style>
+
+</style>
 <div class="container">
-    <h3 class="mt-3 mb-3">Cart</h3>
+    <div class="d-flex justify-content-between mt-5 mb-3">
+        <h3 class="">Cart</h3>
+        <a href="?url=list" class="btn btn-primary">Giỏ hàng <span class="">
+            (<?= isset($_SESSION['count_cart'])?$_SESSION['count_cart']:''?>)
+        </span></a>
+    </div>
     <?php if (isset($_SESSION['success-update'])): ?>
         <div class="alert alert-warning alert-dismissible fade show" id="success-message" role="alert">
             <?= $_SESSION['success-update'] ?>
